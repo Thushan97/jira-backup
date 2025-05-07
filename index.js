@@ -14,6 +14,7 @@ app.use(express.json());
 
 app.post("/start-backup-download", async (req, res) => {
   const { downloadUrl } = req.body;
+  console.log(downloadUrl);
 
   if (!downloadUrl) {
     return res.status(400).json({ error: "Download url is required" });
